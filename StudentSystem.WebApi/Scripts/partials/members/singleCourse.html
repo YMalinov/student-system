@@ -1,0 +1,151 @@
+﻿<style>
+    #item-content {
+        -ms-grid-row: 2;
+        height: 100%;
+        width: 380px;
+        -ms-grid-column: 1;
+        padding: 20px;
+    }
+
+    #grdMain {
+        display: -ms-grid;
+        -ms-grid-columns: 380px 1fr;
+        width: 100%;
+        -ms-grid-rows: 1fr;
+    }
+
+    #grdView {
+        -ms-grid-column: 2;
+        width: 84%;
+        height: 100%;
+        -ms-grid-columns: auto auto;
+        -ms-grid-rows: auto auto;
+    }
+
+
+
+    #pnlLeft {
+        -ms-grid-row: 1;
+        width: 280px;
+        margin: 0px 60px;
+    }
+
+    .itemHeader {
+        text-align: center;
+        padding: 5px;
+        height: 40px;
+    }
+
+    .itemGrid {
+        display: -ms-grid;
+        padding: 5px;
+        width: 560px;
+    }
+
+    #imgLection {
+        -ms-grid-column: 1;
+        padding: 5px;
+    }
+
+    .itemResources {
+        -ms-grid-column: 2;
+        padding: 5px;
+    }
+
+    #btnHomework {
+        -ms-grid-row: 2;
+        -ms-grid-column-span: 2;
+        padding: 5px;
+    }
+
+    .courseHeading {
+        background-image: url("/Content/Courses/Images/courseHeadingNotebook.png"),url("/Content/Courses/Images/coursesHeaderGradient.png");
+        margin: 0;
+        background: #bbd781;
+        background: url("/Content/Courses/Images/courseHeadingNotebook.png"),url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJod…EiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+        background: url("/Content/Courses/Images/courseHeadingNotebook.png"),-moz-linear-gradient(left,#bbd781 0%,#fff 78%,#fff 100%);
+        background: url("/Content/Courses/Images/courseHeadingNotebook.png"),-webkit-gradient(linear,left top,right top,color-stop(0%,#bbd781),color-stop(78%,#fff),color-stop(100%,#fff));
+        background: url("/Content/Courses/Images/courseHeadingNotebook.png"),-webkit-linear-gradient(left,#bbd781 0%,#fff 78%,#fff 100%);
+        background: url("/Content/Courses/Images/courseHeadingNotebook.png"),-o-linear-gradient(left,#bbd781 0%,#fff 78%,#fff 100%);
+        background: url("/Content/Courses/Images/courseHeadingNotebook.png"),-ms-linear-gradient(left,#bbd781 0%,#fff 78%,#fff 100%);
+        background: url("/Content/Courses/Images/courseHeadingNotebook.png"),linear-gradient(to right,#bbd781 0%,#fff 78%,#fff 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#bbd781',endColorstr='#ffffff',GradientType=1);
+        background-repeat: no-repeat,repeat-y;
+        background-position: 5px 5px,0 0;
+        padding: 4px 50px;
+    }
+
+    .courseInformation {
+        padding: 10px 4px 4px 10px;
+    }
+
+    article {
+        border: 1px solid #99c341;
+        margin: 10px 0;
+    }
+
+    dl {
+        display: block;
+        -webkit-margin-before: 1em;
+        -webkit-margin-after: 1em;
+        -webkit-margin-start: 0px;
+        -webkit-margin-end: 0px;
+    }
+
+    label {
+        cursor: default;
+    }
+</style>
+
+<script id="contentItemResources" type="text/x-kendo-template">
+    <a href="#:Link#" data-bind="text: this" target="_blank"></a>
+</script>
+
+<script id="coursListItem" type="text/x-kendo-template">
+    <div class="viewItem">
+        <h3 class="itemHeader" data-bind="text: lecturename"></h3>
+        <div class="itemGrid">
+            <img id="imgLection" data-bind="text: lectureid" />
+            <ul class="itemResources" data-role="listview" data-bind="source: resources" data-template="contentItemResources"></ul>
+        </div>
+    </div>
+</script>
+
+<div class="singleCourse fragment">
+    <section class="currentPage" aria-label="Main content" role="main">
+        <div id="grdMain">
+            <div id="pnlLeft">
+                <article>
+                    <h2 class="courseHeading" data-bind="text: coursetitle"></h2>
+                    <div class="courseInformation">
+                        <dl class="courseDescription">
+                            <dt>
+                                <label for="CourseInstanceDescription">Описание</label>:
+                            </dt>
+                            <dd>
+                                <p data-bind="text: description"></p>
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt>
+                                <label for="StartDate">Начална дата</label>:
+                            </dt>
+                            <dd data-bind="text: startdate"></dd>
+                            <dt>
+                                <label for="EndDate">Крайна дата</label>:
+                            </dt>
+                            <dd data-bind="text: enddate"></dd>
+                            <dt>
+                                <label for="LecturesPerWeek">Лекции за седмица</label>:
+                            </dt>
+                            <dd data-bind="text: lecturesperweek"></dd>
+                        </dl>
+                    </div>
+                </article>
+            </div>
+            
+             <ul id="grdUsers" data-role="listview" data-bind="source: lectures" data-template="contentList"></ul>
+
+        </div>
+    </section>
+</div>

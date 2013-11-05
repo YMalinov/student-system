@@ -1,0 +1,12 @@
+﻿<div>
+    <h1>List all users here...</h1>
+    <ul>
+        <li ng-repeat="user in users">
+            <span>Id: </span><strong>{{user.id}}</strong>
+            <span>Username: </span><strong>{{user.username}}</strong>
+            <span>UserType: </span>
+            <strong ng-show="user.usertype==0">Regular</strong>
+            <strong ng-show="user.usertype==2">Admin</strong>
+            <a href="#/user/{{user.id}}">see user</a>
+    </ul>
+</div>

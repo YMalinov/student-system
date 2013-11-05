@@ -1,0 +1,65 @@
+﻿<div class="row">
+    <h3 class="text-center">Profile of <span data-bind="text: nickname"></span></h3>
+    <div id="UserProfileInformation" class="offset5 span4">
+        <div id="PersonalSection">
+            <div class="informationRow">
+                <div class="display-label">
+                    <strong>Студентски номер:</strong>
+                </div>
+                <span class="display-field" data-bind="text: studentNumber">Не е въвден(а)</span>
+            </div>
+            <div class="informationRow">
+                <div class="display-label">
+                    <strong>Уебсайт:</strong>
+                </div>
+                <a class="display-field websiteLink" data-bind="attr: { href: website }, text: website">Не е въвден(а)</a>
+            </div>
+            <div class="informationRow">
+                <div class="display-label">
+                    <strong>Пол:</strong>
+                </div>
+                <span class="display-field" data-bind="text: gender"></span>
+            </div>
+            <div class="informationRow">
+                <div class="display-label">
+                    <strong>Град:</strong>
+                </div>
+                <span class="display-field" data-bind="text: hometown"></span>
+            </div>
+            <div class="informationRow">
+                <div class="display-label">
+                    <strong>Рождена дата:</strong>
+                </div>
+                <span class="display-field" data-bind="text: birthday"></span>
+            </div>
+            <div class="informationRow">
+                <div class="display-label">
+                    <strong>Имейл адрес:</strong>
+                </div>
+                <span class="display-field websiteLink">
+                    <a data-bind="text: email, attr: { href: email }" href="#" target="_blank"></a>
+                </span>
+            </div>
+            <div class="informationRow">
+                <div class="display-label">
+                    <span>Занимание:
+                    </span>
+                </div>
+                <span class="display-field" data-bind="text: occupation"></span>
+            </div>
+        </div>
+        <div id="AboutMe">
+            <div class="display-label">
+                <strong>За мен:</strong>
+            </div>
+            <span class="display-field" data-bind="text: aboutme">Не е въведена информация</span>
+        </div>
+        <div id="DateRegistered">
+            <div class="informationRow">
+                <div class="display-label">
+                    <strong>Дата на регистрация</strong></div>
+                <span class="display-field" data-bind="text: registrationDate">03/10/2012</span>
+            </div>
+        </div>
+    </div>
+</div>

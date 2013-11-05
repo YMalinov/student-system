@@ -1,0 +1,39 @@
+﻿<div>
+    <fieldset>
+        <legend>User</legend>
+        <label for="tb-username">Username:</label>
+        <input type="text" id="tb-username" ng-model="user.username" />
+        <br />
+        <label for="tb-website">Website:</label>
+        <input type="text" id="tb-website" ng-model="user.website" />
+        <br />
+        <label for="tb-email">e-mail:</label>
+        <input type="text" id="tb-email" ng-model="user.email" />
+        <br />
+        <label for="tb-hometown">Home town:</label>
+        <input type="text" id="tb-hometown" ng-model="user.hometown" />
+        <br />
+        <label for="tb-birthday">Birthday:</label>
+        <input type="date" id="tb-enddate" ng-model="user.birthday" />
+        <br />
+        <label for="tb-lastvisit">Last visit:</label>
+        <strong id="tb-lastvisit">{{user.lastVisit}}</strong>
+        <br />
+        <label for="tb-registrationDate">Registration date:</label>
+        <strong id="tb-registrationDate">{{user.registrationDate}}</strong>
+        <br />
+        <label for="tb-aboutme">About me:</label>
+        <input type="text" id="tb-aboutme" ng-model="user.aboutme" />
+        <br />
+        <label for="tb-occupation">Occupation:</label>
+        <input type="text" id="tb-occupation" ng-model="user.occupation" />
+        <br />
+        <ul ng-show="user.courses">
+            <h3>Courses:</h3>
+            <li ng-repeat="course in user.courses">
+            <a href="#/course/{{course.courseid}}"><span>Name: </span><strong>{{course.coursetitle}}</strong></a>
+        </ul>
+        <button ng-click="save()">Save</button>
+        <span>{{message}}</span>
+    </fieldset>
+</div>

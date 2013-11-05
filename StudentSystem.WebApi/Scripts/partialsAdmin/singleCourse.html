@@ -1,0 +1,30 @@
+﻿<div>
+    <fieldset>
+        <legend>Course</legend>
+        <label for="tb-title">Title:</label>
+        <input type="text" id="tb-title" ng-model="course.coursetitle" />
+        <br />
+        <label for="tb-description">Description:</label>
+        <textarea id="tb-description" ng-model="course.description" />
+        <br />
+        <label for="tb-lectures">Lectures per week:</label>
+        <input type="text" id="tb-lectures" ng-model="course.lecturesperweek" />
+        <br />
+        <label for="tb-startdate">Start date:</label>
+        <input type="date" id="tb-startdate" ng-model="course.startdate"  />
+        <br />
+        <label for="tb-enddate">End date:</label>
+        <input type="date" id="tb-enddate" ng-model="course.enddate" />
+        <br />
+        <label for="tb-signupdeadline">End date:</label>
+        <input type="date" id="tb-signupdeadline" ng-model="course.signupdeadline" />
+        <br />
+        <ul ng-show="course.lectures">
+            <h3>Lectures:</h3>
+            <li ng-repeat="lecture in course.lectures">
+            <span>Name: </span><strong>{{lecture.lecturename}}</strong>
+        </ul>
+        <button ng-click="save()">Save</button>
+        <span>{{message}}</span>
+    </fieldset>
+</div>

@@ -1,0 +1,57 @@
+﻿<style>
+    .viewItem {
+        display: -ms-grid;
+        width: 220px;
+        height: 75px;
+        background-color: #82b517;
+        margin: 10px;
+    }
+
+    #imgAvatar {
+        -ms-grid-column: 1;
+        width: 40px;
+        margin-top: 17px;
+        margin-left: 10px;
+    }
+
+    .rightItems {
+        -ms-grid-column: 2;
+        width: 160px;
+        color: white !important;
+        margin-left: 14px;
+    }
+
+    .searchUsername {
+        margin-top: 15px;
+        font-size: 14px;
+    }
+</style>
+
+<script id="userListItem" type="text/x-kendo-template">
+    <li class="SearchMetroResult">
+        <img id="imgAvatar" class="SearchMetroResultImage" data-bind="attr: { src: pictureFileName }" />
+        <div class="SearchMetroResultInfo">
+            <h3 class="SearchMetroResultHeading SearchMetroResultMainHeading" data-bind="text: username"></h3>
+            <p class="SearchMetroResultHeading SearchMetroResultSubHeading" data-bind="text: username"></p>
+        </div>
+    </li>
+</script>
+
+<script id="coursListItem" type="text/x-kendo-template">
+    <li class="SearchMetroResult">
+        <img id="imgAvatar" class="SearchMetroResultImage" src="/Content/searchSuggestionIconCourse.png" />
+        <div class="SearchMetroResultInfo">
+            <h3 class="SearchMetroResultHeading SearchMetroResultMainHeading" data-bind="text: courseName"></h3>
+        </div>
+    </li>
+</script>
+
+<div class="search fragment">
+    <section aria-label="Main content" role="main">
+        <div id="pnlMain">
+            <ul id="grdUsers" data-role="listview" data-bind="source: users" data-template="userListItem"></ul>
+            <br/>
+            <ul id="grdCourses" data-role="listview" data-bind="source: courses" data-template="coursListItem"></ul>
+        </div>
+    </section>
+</div>

@@ -1,0 +1,11 @@
+﻿<div>
+    <h1>List all courses here...</h1>
+    <ul>
+        <li ng-repeat="course in courses">
+            <span>Title: </span><strong>{{course.coursetitle}}</strong>
+            <a href="#/course/{{course.courseid}}">edit course</a>
+            <input type="checkbox" ng-checked="course.isVisible" disabled="disabled"/>
+            <button ng-click="remove(course.courseid)">Delete</button>
+    </ul>
+    <a href="#/course/new">Add course</a>
+</div>

@@ -1,0 +1,102 @@
+﻿#MainContent {
+    min-height: 500px;
+}
+
+.SearchResultsListTitle {
+    background-image: url("/Content/Courses/Images/coursesTitleTopBorder.png"), url("/Content/Courses/Images/coursesTitleBottomBorder.png");
+    background-position: left top, left bottom;
+    background-repeat: no-repeat;
+    padding: 5px 0 10px 0;
+}
+
+.SearchResultsCategoryTitle {
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+.SearchResultsCategory {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.SearchMetroList {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.SearchMetroResult {
+    display: inline-block;
+    width: 220px;
+    height: 75px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    background-color: #82b517;
+    /*
+    border: 2px solid  #82b517;
+        */
+}
+
+    .SearchMetroResult:hover {
+    /*border-color:  #384d0c;*/
+        /* */
+        position: relative;
+        margin-top: -2px;
+        margin-bottom: 7px;
+        margin-left: -2px;
+        margin-right: 7px;
+        margin: -2px 7px 7px -2px;
+        -moz-box-shadow: 2px 2px 5px #999;
+        -webkit-box-shadow: 2px 2px 5px #999;
+        box-shadow: 2px 2px 5px #999;
+        
+        -webkit-transition: all 0.3s ease;
+        -moz-transition: all 0.3s ease;
+        -ms-transition: all 0.3s ease;
+        -o-transition: all 0.3s ease;
+        transition: all 0.3s ease;
+    }
+
+    .SearchMetroResult a {
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+
+        .SearchMetroResult a:hover {
+            text-decoration: none;
+        }
+
+.SearchMetroResultImage {
+    width: 40px;
+    margin-top: 17px;
+    margin-left: 10px;
+    float: left;
+}
+
+.SearchMetroResultInfo {
+    float: left;
+    display: inline-block;
+    width: 160px;
+}
+
+.SearchMetroResultHeading {
+    font-family: "Segoe UI", ​"Arial", ​sans-serif;
+    font-weight: normal;
+    margin: 0 0 0 10px;
+    -ms-word-break: break-all;
+    word-break: break-all;
+}
+
+.SearchMetroResultMainHeading {
+    font-size: 14px;
+    margin-top: 15px;
+    color: white !important;
+}
+
+.SearchMetroResultSubHeading {
+    font-size: 12px;
+    display: inline-block;
+    color: white !important;
+}
